@@ -86,15 +86,22 @@ Assign the result to a variable named swappedString.
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); // Your code here
+let thirdCodePoint = inputString1.charCodeAt(2); // Your code here
 
 // Task 2
-let wordFromCodePoints; // Your code here
+
+let wordFromCodePoints =  String.fromCharCode(72) + String.fromCharCode(101) + 
+String.fromCharCode(108) + String.fromCharCode(108) ; // Your code here
+
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+//extract unicode points of first and last characters
+let firstCode = inputString2.charCodeAt(0);
+let lastCode = inputString2.charCodeAt(inputString2.length - 1);
+//Use String.fromCharCode to swap these characters and create a new string "hauncL"
+let swappedString = String.fromCharCode(lastCode) + inputString2.slice(1 , inputString2.length - 1) + String.fromCharCode(firstCode) ; // Your code here
 
 // Log all results
 console.log({
